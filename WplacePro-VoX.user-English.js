@@ -2824,8 +2824,8 @@ function updateUI() {
   }
 
   function updateMasterButtons() {
-    cc.freeToggle.textContent = isAllFreeActive() ? 'Desmarcar todo' : 'Marcar todo';
-    cc.paidToggle.textContent = isAllPaidActive() ? 'Desmarcar todo' : 'Marcar todo';
+    cc.freeToggle.textContent = isAllFreeActive() ? 'Uncheck all' : 'Check all';
+    cc.paidToggle.textContent = isAllPaidActive() ? 'Uncheck all' : 'Check all';
   }
   function isAllFreeActive() { return DEFAULT_FREE_KEYS.every(k => cc.selectedFree.has(k)); }
   function isAllPaidActive() {
@@ -2886,7 +2886,7 @@ function updateUI() {
             <label for="op-rs-lock">Lock aspect ratio</label>
           </div>
           <div class="op-rs-row" style="gap:6px; flex-wrap:wrap;">
-            <label style="width:110px;">Speed</label>
+            <label style="width:110px;">Scale</label>
             <button class="op-button" id="op-rs-double">2x</button>
             <button class="op-button" id="op-rs-onex">1x</button>
             <button class="op-button" id="op-rs-half">0.5x</button>
@@ -2894,7 +2894,7 @@ function updateUI() {
             <button class="op-button" id="op-rs-quarter">0.25x</button>
           </div>
           <div class="op-rs-row">
-            <label style="width:110px;">Scale factor</label>
+            <label style="width:110px;">Custom scale</label>
             <input type="number" step="0.01" min="0.01" class="op-input" id="op-rs-scale" placeholder="ej. 0.5">
             <button class="op-button" id="op-rs-apply-scale">Apply</button>
           </div>
